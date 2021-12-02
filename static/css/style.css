@@ -4,7 +4,7 @@ body {
   }
   
   .jumbotron {
-    /* background-image: url("/static/images/wineI.PNG"); */
+    /* background-image: url("/static/images/wineI.png"); */
     background-image: url("https://dmyrick.github.io/Predicting_Wine_Quality/static/images/wineI.png");
     background-size: 100% 100%;
     text-align: center;
