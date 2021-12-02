@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>"Predicting_Wine_Quality" </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="static/css/style.css">
+
+
+</head>
+
+<body class="bg-white">
+  <div class="wrapper">
+
+  </div>
+  <div class="jumbotron">
+    <h1 class="display-4" ,style=text-align:center;>Predicting Wine Quality</h1>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Predicting Wine Quality<br><small> Machine Learning Results</small></h3>
+        <form class="well">
+          <select id="selDataset" onchange="optionChanged(this.value)">
+            <option value="">Select a Wine ID</option>
+          </select>
+          </p>
+          <ul class="bg-white list-group">
+            <li class="list-group-item" style="background-color: rgb(238, 141, 141);">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="ID">Wine ID</label>
+                </div>
+                <div class="col-md-9">
+                  <input type="text" id="ID" />
+                </div>
+              </div>
+            <li class="list-group-item" style="background-color: rgb(238, 141, 141);">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="FixedAcidity">Fixed Acidity</label>
+                </div>
+                <div class="col-md-9">
+                  <input type="number" id="FixedAcidity" />
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item" style="background-color: rgb(238, 141, 141);">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="VolatileAcidity">Volatile Acidity</label>
+                </div>
+                <div class="col-md-9">
+                  <input type="number" id="VolatileAcidity" />
+                </div>
+            </li>
+            <li class="list-group-item" style="background-color: rgb(238, 141, 141);">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="CitricAcid">Citric Acid</label>
+                </div>
+                <div class="col-md-9">
+                  <input type="number" id="CitricAcid" />
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item" style="background-color: rgb(238, 141, 141);">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="ResidualSugar">Residual Sugar</label>
+                </div>
+                <div class="col-md-9">
+                  <input type="number" id="ResidualSugar" />
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item" style="background-color: rgb(238, 141, 141);">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="Chlorides">Chlorides</label>
+                </div>
+                <div class="col-md-9">
+                  <input type="number" id="Chlorides" />
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item" style="background-color: rgb(238, 141, 141);">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="FSulfurDioxide">Free Sulfur Dioxide</label>
+                </div>
+                <div class="col-md-9">
+                  <input type="number" id="FSulfurDioxide" />
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item" style="background-color: rgb(238, 141, 141);">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="TSulfurDioxide">Total Sulfur Dioxide</label>
+                </div>
+                <div class="col-md-9">
+                  <input type="number" id="TSulfurDioxide" />
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item" style="background-color: rgb(238, 141, 141);">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="Density">Density</label>
+                </div>
+                <div class="col-md-9">
+                  <input type="number" id="Density" />
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item" style="background-color: rgb(238, 141, 141);">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="pH">pH</label>
+                </div>
+                <div class="col-md-9">
+                  <input type="number" id="pH" />
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item" style="background-color: rgb(238, 141, 141);">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="Sulphates">Sulphates</label>
+                </div>
+                <div class="col-md-9">
+                  <input type="number" id="Sulphates" />
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item" style="background-color: rgb(238, 141, 141);">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="Alcohol">Alcohol</label>
+                </div>
+                <div class="col-md-9">
+                  <input type="number" id="Alcohol" />
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item" style="background-color: rgb(238, 141, 141);">
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="Quality">Quality</label>
+                </div>
+                <div class="col-md-9">
+                  <input type="number" id="Quality" />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </form>
+        <ul>
+      </div>
+      <div class="col-md-8">
+        <p style=text-align:center;>
+          Have you ever wondered what characteristic of wine provides an acceptable quality score?
+          Well, if you have, then you are in for a surprise! Myrick, Purvis, and Vath Leadership team
+          completed a consult for JDD Vineyards. The consult included performing an analysis of JDD
+          Vineyard’s wine portfolio. Using machine learning, the goal was to predict the quality scores
+          of the wine produced at JDD Vineyard based upon characteristics of the wine.<br><br>
+          Please use the dropdown to observe the output data from the machine learning of the quality scores
+          produced of the white (W) and red (R) wines of JDD Vineyard.<br><br>
+          Additional visualizations may be viewed in this <a
+            href="https://public.tableau.com/views/Final_Project_16381278221320/Story1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_lin">Tableau
+            Story</a>.<br><br>
+          <img src="/static/images/wineII.png">
+          </h5>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/plots.js"></script>
+  <script src="static/css/style.css"></script>
+
+</body>
+
+</html>
